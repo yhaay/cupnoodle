@@ -24,7 +24,7 @@ body {
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">ƒ≈∂Û∏È ππ∏‘¡ˆ</a>
+          <a class="navbar-brand" href="/">ÏªµÎùºÎ©¥ Î≠êÎ®πÏßÄ</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
 		<ul class="nav navbar-nav">
@@ -34,12 +34,12 @@ body {
           </ul>        
           <form class="navbar-form navbar-right">
             <div class="form-group">
-              <input type="text" placeholder="¿Ã∏ﬁ¿œ" class="form-control">
+              <input type="text" placeholder="Ïù¥Î©îÏùº" class="form-control">
             </div>
             <div class="form-group">
-              <input type="password" placeholder="∫Òπ–π¯»£" class="form-control">
+              <input type="password" placeholder="ÎπÑÎ∞ÄÎ≤àÌò∏" class="form-control">
             </div>
-            <button type="submit" class="btn btn-success">∑Œ±◊¿Œ</button>
+            <button type="submit" class="btn btn-success">Î°úÍ∑∏Ïù∏</button>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
