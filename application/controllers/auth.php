@@ -4,7 +4,7 @@ class User_model extends CI_Model {
 		parent::__construct ();
 	}
 	function register() {
-		$this->_head ();
+		$this->load->view ( 'head' );
 		
 		$this->load->library ( 'form_validation' );
 		
@@ -33,7 +33,7 @@ class User_model extends CI_Model {
 			redirect ( '/' );
 		}
 		
-		$this->_footer ();
+		$this->load->view ( 'footer' );
 	}
 }
 ?>
