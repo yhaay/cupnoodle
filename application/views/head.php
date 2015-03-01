@@ -42,8 +42,11 @@ img {
             <div class="form-group">
               <input type="password" placeholder="비밀번호" class="form-control">
             </div>
-            <button type="submit" class="btn btn-success">로그인</button>
-          </form>
+            <div class="btn-group">
+            	<button type="submit" class="btn btn-info">로그인</button>
+            	<a href="/auth/register" class="btn btn-primary"">회원가입</a>
+            </div>
+            </form>
         </div><!--/.navbar-collapse -->
       </div>
     </nav>

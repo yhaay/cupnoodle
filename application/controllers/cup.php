@@ -1,20 +1,18 @@
 <?php
-if (! defined ( 'BASEPATH' ))
-	exit ( 'No direct script access allowed' );
-
-class Topic extends CI_controller {
+class Cup extends CI_Controller {
+	function __construct() {
+		parent::__construct ();
+	}
 	public function index() {
 		$this->load->view ( 'head' );
-		$this->load->view ( 'main' );
 		$this->load->view ( 'footer' );
 	}
-	public function get($id) {
+	function info($idx) {
 		$this->load->view ( 'head' );
-		$this->load->view ( 'get', array (
-				'id' => $id 
+		$this->load->view ( 'cup_info', array (
+				'idx' => $idx 
 		) );
 		$this->load->view ( 'footer' );
 	}
 }
-
 ?>

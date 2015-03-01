@@ -9,7 +9,7 @@ class Cupnoodle_model extends CI_Model {
 		$this->db->select('cupnoodleidx,name,rate,filepath');
 		$this->db->order_by('rate','desc');
 		$this->db->limit($num);
-		$query = $this->db->get('CUPNOODLE');
+		$query = $this->db->get('cupnoodle');
 		return $query->result();
 	}
 }
