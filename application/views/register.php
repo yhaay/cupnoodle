@@ -2,7 +2,7 @@
   <div class="span4"></div>
   <div class="span4">
     <?php echo validation_errors(); ?>
-    <form class="form-horizontal" action="/index.php/auth/register" method="post">
+    <form class="form-horizontal" action="/auth/register" method="post">
       <div class="control-group">
         <label class="control-label" for="inputEmail">이메일</label>
         <div class="controls">
