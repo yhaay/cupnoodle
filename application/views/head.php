@@ -11,6 +11,9 @@ body {
 	padding-top: 50px;
 	padding-bottom: 20px;
 }
+img {
+	max-width: 100%;
+}
 </style>
 </head>
 <body>
