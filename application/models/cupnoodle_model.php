@@ -6,7 +6,7 @@ class Cupnoodle_model extends CI_Model {
 	}
 	
 	function get_best($num) {
-		$this->db->select('name,rate');
+		$this->db->select('name,rate,filepath');
 		$this->db->order_by('rate','desc');
 		$this->db->limit($num);
 		$query = $this->db->get('CUPNOODLE');
