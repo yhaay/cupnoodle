@@ -9,7 +9,7 @@
           <p><?php $row->rate?></p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div>
-      }
+      <?php } ?>
       <hr>
 
     </div>
