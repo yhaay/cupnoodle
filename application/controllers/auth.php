@@ -1,5 +1,5 @@
 <?php
-class User_model extends CI_Model {
+class Auth extends CI_Controller {
 	function __construct() {
 		parent::__construct ();
 	}
