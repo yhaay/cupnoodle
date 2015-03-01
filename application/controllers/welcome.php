@@ -27,8 +27,8 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view ( 'head' );
 		$this->load->view ( 'main' );
-		$cupnoodles = $this->cupnoodle_model->get_best(3);
-		$this->load->view('main_cupnoodle',$cupnoodles);
+		$cupnoodle = $this->cupnoodle_model->get_best(3);
+		$this->load->view('main_cupnoodle',$cupnoodle);
 		$this->load->view ( 'footer' );
 	}
 }
