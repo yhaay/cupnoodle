@@ -50,7 +50,7 @@ class Auth extends CI_Controller {
 	
 	function authentication(){
 		$this->load->model('user_model');
-		$user = $this->user_model->getByEmail(array('email'=>$this->input->post('email')));
+		$user = $this->user_model->get(array('email'=>$this->input->post('email')));
 		if(!function_exists('password_hash')){
 			$this->load->helper('password');
 		}
