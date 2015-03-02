@@ -6,7 +6,7 @@
 			<label class="control-label" for="nickname">닉네임</label>
 			<div class="controls">
 				<input type="text" id="nickname" name="nickname" class="form-control"
-					value="<?php echo set_value('nickname'); ?>" placeholder="닉네임">
+					value="<?php echo set_value('nickname'); ?>" placeholder="닉네임" required autofocus>
 			</div>
 		</div>
 		<div>&nbsp;</div>
@@ -14,7 +14,7 @@
 			<label class="control-label" for="inputEmail">이메일</label>
 			<div class="controls">
 				<input type="email" id="email" name="email" class="form-control"
-					value="<?php echo set_value('email'); ?>" placeholder="이메일" required autofocus>
+					value="<?php echo set_value('email'); ?>" placeholder="이메일" required>
 			</div>
 		</div>
 		<div>&nbsp;</div>
@@ -22,7 +22,7 @@
 			<label class="control-label" for="password">비밀번호</label>
 			<div class="controls">
 				<input type="password" id="password" name="password" class="form-control"
-					value="<?php echo set_value('password'); ?>" placeholder="비밀번호">
+					value="<?php echo set_value('password'); ?>" placeholder="비밀번호" required>
 			</div>
 		</div>
 		<div>&nbsp;</div>
@@ -31,7 +31,7 @@
 			<div class="controls">
 				<input type="password" id="re_password" name="re_password" class="form-control"
 					value="<?php echo set_value('re_password'); ?>"
-					placeholder="비밀번호 확인">
+					placeholder="비밀번호 확인" required>
 			</div>
 		</div>
 		<div>&nbsp;</div>
