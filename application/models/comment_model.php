@@ -4,7 +4,7 @@ class Comment_model extends CI_Model {
 		parent::__construct ();
 	}
 	function get($option) {
-		$this->db->select ( 'nickname', 'description' );
+		$this->db->select ( 'nickname,description' );
 		$this->db->where ( 'cupnoodleidx', $option ['cupnoodleidx'] );
 		$this->db->limit ( $option ['num'] );
 		$query = $this->db->get ( 'comment' );
