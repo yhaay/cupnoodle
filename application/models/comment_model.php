@@ -4,11 +4,11 @@ class Comment_model extends CI_Model {
 		parent::__construct ();
 	}
 	function get($option) {
-		$result = $this->db->get_where ( 'comment', array (
-				'cupnoodleidx' => $option ['cupnoodleidx'] 
-		) )->row ();
-		var_dump ( $this->db->last_query () );
-		return $result;
+		$this->db->select ( 'nickname', 'description' );
+		$this->db->where ( 'cupnoodleidx', $option ['cupnoodleidx'] );
+		$this->db->limit ( $option ['num'] );
+		$query = $this->db->get ( 'comment' );
+		return $query->result ();
 	}
 	function add($option) {
 		$this->db->set ( 'useridx', $option ['useridx'] );

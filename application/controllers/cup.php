@@ -12,6 +12,16 @@ class Cup extends CI_Controller {
 		$this->load->view ( 'cup_info', array (
 				'idx' => $idx 
 		) );
+		if ($this->session->userdata ( 'is_login' ) == TRUE) {
+			$this->load->view ( 'comment_write' );
+		}
+		$comment = $this->comment_model->get ( array (
+				'cupnoodleidx' => $idx,
+				'num' => 10 
+		) );
+		$this->load->view ( 'comment_list', array (
+				'comment' => $comment 
+		) );
 		$this->load->view ( 'footer' );
 	}
 }
