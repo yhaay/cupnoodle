@@ -35,36 +35,36 @@ class Auth extends CI_Controller {
 		
 		$this->load->view ( 'footer' );
 	}
-	
 	function login() {
-		$this->load->view('head');
-		$this->load->view('login');
-		$this->load->view('footer');
+		$this->load->view ( 'head' );
+		$this->load->view ( 'login' );
+		$this->load->view ( 'footer' );
 	}
-	
 	function logout() {
-		$this->session->sess_destroy();
-		$this->load->helper('url');
-		redirect('/');
+		$this->session->sess_destroy ();
+		$this->load->helper ( 'url' );
+		redirect ( '/' );
 	}
-	
-	function authentication(){
-		$this->load->model('user_model');
-		$user = $this->user_model->get(array('email'=>$this->input->post('email')));
-		if(!function_exists('password_hash')){
-			$this->load->helper('password');
+	function authentication() {
+		$this->load->model ( 'user_model' );
+		$user = $this->user_model->get ( array (
+				'email' => $this->input->post ( 'email' ) 
+		) );
+		if (! function_exists ( 'password_hash' )) {
+			$this->load->helper ( 'password' );
 		}
-		if(
-				$this->input->post('email') == $user->email &&
-				password_verify($this->input->post('password'), $user->password)
-		) {
-			$this->session->set_userdata('is_login', true);
-			$this->load->helper('url');
-			redirect("/");
+		if ($this->input->post ( 'email' ) == $user->email && password_verify ( $this->input->post ( 'password' ), $user->password )) {
+			$this->session->set_userdata ( array (
+					'is_login' => true,
+					'nickname' => $user->nickname,
+					'email' => $user->email 
+			) );
+			$this->load->helper ( 'url' );
+			redirect ( "/" );
 		} else {
 			echo "불일치";
-			$this->load->helper('url');
-			redirect('/auth/login');
+			$this->load->helper ( 'url' );
+			redirect ( '/auth/login' );
 		}
 	}
 }
