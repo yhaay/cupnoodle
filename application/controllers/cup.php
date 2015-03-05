@@ -15,6 +15,7 @@ class Cup extends CI_Controller {
 		if ($this->session->userdata ( 'is_login' ) == TRUE) {
 			$this->load->view ( 'comment_write' );
 		}
+		$this->load->model ( 'comment_model' );
 		$comment = $this->comment_model->get ( array (
 				'cupnoodleidx' => $idx,
 				'num' => 10 
