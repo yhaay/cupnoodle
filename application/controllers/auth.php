@@ -56,6 +56,7 @@ class Auth extends CI_Controller {
 		if ($this->input->post ( 'email' ) == $user->email && password_verify ( $this->input->post ( 'password' ), $user->password )) {
 			$this->session->set_userdata ( array (
 					'is_login' => true,
+					'useridx' => $user->useridx,
 					'nickname' => $user->nickname,
 					'email' => $user->email 
 			) );
