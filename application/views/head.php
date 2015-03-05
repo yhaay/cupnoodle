@@ -38,8 +38,8 @@ img {
 					<li><a href="/new">New</a></li>
 				</ul>
 				<form class="navbar-form navbar-right">
-				<?php if ($this->session->useradata['is_login'] == TRUE) {?>
-					<?php echo $this->session->userdata['nickname']?>님 환영합니다.
+				<?php if ($this->session->userdata('is_login') == TRUE) {?>
+					<?php echo $this->session->userdata('nickname')?>님 환영합니다.
 					<a href="/auth/logout" class="btn btn-info">로그아웃</a>
 				<?php } else {?>
 					<a href="/auth/login" class="btn btn-info">로그인</a>
